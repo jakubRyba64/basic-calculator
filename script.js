@@ -12,7 +12,11 @@ function calcFunc(value){
       inputDisplay.value += value;
 }
 function calsFuncEqual(){
-    inputDisplay.value = (inputDisplay.value)
+    try {
+        inputDisplay.value = eval(inputDisplay.value)
+    } catch {
+        inputDisplay.value = "Error"
+    }
     shouldClearInput = true;
 }
 
